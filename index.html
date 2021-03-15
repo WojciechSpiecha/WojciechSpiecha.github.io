@@ -5,25 +5,76 @@
         <style>
             .wrapper{
                 display:grid;
+                grid-template-columns: 1fr 3fr;
+                /* grid-gap:5px; */
             }
             .wrapper > div {
-                background: navy;
+                background:rgb(241, 241, 241);
                 padding: 1em;
             }
-            .wrapper > div:nth-child(odd)
+            
+            .wrapper > div:nth-child(2)
             {
-                background: grey;
+                background:rgb(187, 187, 187);
+                border-right: 2px solid #333;
             }
+            .wrapper > div:nth-child(1)
+            {
+                background:rgb(241, 241, 241);
+            }
+            .wrapper > div:nth-child(4)
+            {
+                background:rgb(187, 187, 187);
+            }
+            
+            .naglowek{
+                grid-column: 1/3;
+            }
+
+            .stopka{
+                grid-column: 1/3;
+            }
+
+            .container3{
+                display: flex;
+                flex-direction:column;
+                border-bottom: 1px solid #333;;
+            }
+
+
         </style>
     </head>
     <body>
-        <div class="grid">
-            <div>
-                100 słów
+        <div class="wrapper">
+            <div class="naglowek"> </div>
+            <div class="lewa">
+                <center><h1>Wojciech Spiecha</br></h1>
+                <h3>Informatyk</h3>
+              <img src=CVfotka.png>
+                 
+                </center>
             </div>
-            <div>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime facilis dicta possimus reprehenderit nihil, expedita explicabo in, excepturi necessitatibus praesentium saepe officiis eos non, enim nulla animi voluptate mollitia? Delectus amet natus tempore blanditiis. Facilis eligendi fugiat sapiente commodi perspiciatis vitae facere neque temporibus animi nesciunt eaque, ea ipsam, pariatur, voluptate porro voluptatem ullam ut molestiae. Voluptatem blanditiis porro ipsum, amet soluta nemo, harum commodi hic ut provident qui quibusdam perspiciatis quisquam aliquid consectetur cumque odio adipisci eius vitae. Et?
+            <div class="prawa">
+                <div class="container3">
+                  <div class="Podsumowanie"><h3>Podsumowanie:</h3></div>
+                    <div class="PodsumowanieTresc">PodsumowanieTresc</div>
+                </div>
+                <div class="container3">
+                    <div class="Doswiadczenie"><h3>Doświadczenie:</h3></div>
+                    <div class="DoswiadczenieTresc">DoswiadczenieTresc</div>
+                </div>
+                <div class="container3">
+                    <div class="Wyksztalcenie"><h3>Wykształcenie:</h3></div>
+                    <div class="WyksztalcenieTresc">WyksztalcenieTresc</div>
+                </div>
+                <div class="container3">
+                    <div class="Umiejetnosci"><h3>Umiejętności:</h3></div>
+                    <div class="UmiejetnosciTresc">UmiejetnosciTresc</div>
+                </div>
             </div>
+            <div class="stopka"><center>Wyrażam zgodę na przetwarzanie moich danych 
+                osobowych przez ABCompany w celu prowadzenia rekrutacji 
+                na aplikowane przeze mnie stanowisko.</center></div>
         </div>
     </body>
 </html>
