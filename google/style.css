@@ -31,7 +31,7 @@ body
     display: none;
 }
 
-.kreska_pozioma
+.linia_pozioma
 {
     display: none;
 }
@@ -41,7 +41,7 @@ body
     display: none;
 }
 
-.iks
+.X
 {
     display: none;
 }
@@ -105,7 +105,7 @@ a
     box-sizing: border-box;
 }
 
-.kropeczki
+.g-menu
 {
     display: inline-block;
     padding: 4px;
@@ -376,7 +376,7 @@ a.lan2
     white-space: nowrap;
 }
 
-img.leaf
+img.lisc
 {
     height: 14px;
     margin-right: 3px;
