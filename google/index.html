@@ -1,249 +1,298 @@
 <!DOCTYPE html>
-<html>
-<link rel="icon"  href="data:image/png;base64,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">
-   <title>Google</title>
-<head>
-
-<link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="style123.css">
-
-
-</head>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Google</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style123.css">
+    </head>
+    <body class="results">
 
 
-<body class="results">
-<div class="ukrycie">
-<img id="hide" src="https://www.google.pl/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" class="a"  style="position:relative;">
-</div>
-<div class="ukrycie">
-   <div class="center"><div class="okienko_wyszukiwania" style="position:relative;"><div class="ikona"> <img id="hide" src="https://icon-library.com/images/google-search-icon/google-search-icon-14.jpg" align="left" height=15px><div class="ikony"> <img src="http://bizweb.dktcdn.net/100/093/811/themes/116804/assets/main_menu_icon_1.png?1605862991921" align="right"  height=17px></div></div></div></div>
-
-</div>
-<div class="ukrycie">
-<div class="logowanie" style="position: absolute; top: 0.4%; right: 0; width: 155px; text-align:right;"><div class="gb_ae"> Zaloguj się</div></div>
-
-</div>
-<div class="ukrycie">
-<div class="buttons">
-      <button class="button" type="button">Szukaj w Google</button>
-      <button class="button" type="button">Szczęśliwy traf</button>
-</div>
-</div>
-<div class="ukrycie">
-   
-   
-   <img id="hide"src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png" style="position: absolute; top: 0.5%; right: 14%; width: 32px; text-align:right;"> 
-</div>
-<div class="ukrycie">
- <div class="czcionka" style="position: absolute; top: 1%; right: 18.5%; width: 28px; text-align:right;"> Grafika </div>
-<div class="czcionka" style="position: absolute; top: 1%; right: 21.8%; width: 28px; text-align:right;"> Gmail </div>
-</div>
-
-
-
-
-   <footer>
-       <div class="ukrycie">
-      <Polska>-Polska </Polska>
-       </div>
- 
-      <div class="links">
-            <div class="link_1">
-                <a href="#">O nas</a>
-                <a href="#">Reklamuj się</a>
-                <a href="#">Dla firm</a>
-                <a href="#">Jak działa wyszukiwarka</a>
-            </div>
-            <div class="link_2">
-                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" class="Pb9hCb">Neutralność węglowa od 2007 roku</a>
-            </div>
-            <div class="link_3">
-                <a href="#">Prywatność</a>
-                <a href="#">Warunki</a>
-                <a href="#">Ustawienia</a>
-            </div>
-        </div>
-    </div>
-   </footer>
-  
-   
-   
-   
-  <div id="header">
-        <div id="topbar">
-            <img id="searchbarimage" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" />
-            <div id="searchbar" type="text" >
-                <input id="searchbartext" type="text" value="123" />
-                  <button id="searchbarmic">
-                 <div id="granica">
-                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAJA0oIsYgdH30wmsfIJw7wbuG-dFHwKZMg&usqp=CAU" height=14px;
-width=14px;>
-                      </div>
-                     </button>
-                
-                <button id="searchbarmic">
-                   
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXH5otAU7A3p9HJDtfQrtNVEss4NLlfrM0a7W1gSO6Th-ILA2DCVKPjpkkcO1VRhgRtYc&usqp=CAU" height=24px width=24px />
-           
-                </button>
-                <button id="searchbarbutton">
-                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                        </path>
-                    </svg>
-                </button>
-            </div>
-
-            <div id="boxesicon"></div>
-            <div id="bellicon"><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png" height=24px width=24px></div>
-            <img id="profileimage" src="https://icon-library.com/images/sign-in-with-google-icon/sign-in-with-google-icon-3.jpg" >
-        </div>
-        <div id="optionsbar">
-            <ul id="optionsmenu1">
-                <li id="optionsmenuactive">Wszystko</li>
-                <li>Wiadomości</li>
-                <li>Wideo</li>
-                <li>Zdjęcia</li>
-                <li>Mapy</li>
-                <li>Więcej</li>
-                <li>Opcje</li>
-                <li>Narzędzia</li>
-            </ul>
-
-           
-              
-            
-        </div>
-  
-    <div id="searchresultsarea">
-        <p id="searchresultsnumber">Około 50 000 wyników (0.71 sekund) </p>
-        <div class="searchresult">
-            <h2>123456</h2>
-            <a>link123 </a> <button>▼</button>
-            <p>tekst1 <br>
-               tekst 2 </p>
-        </div>
-
-        <div class="searchresult">
-            <h2>123</h2>
-            <a>link321</a> <button>▼</button>
-            <p>tekst1</p>
-          
-        </div>
-
-        <div class="searchresult">
-            <h2>345</h2>
-            <a>link345</a> <button>▼</button>
-            <p>345...</p>
-        </div>
-
-        <div class="searchresult">
-            <h2>543</h2>
-            <a>link543</a> <button>▼</button>
-            <p>543...</p>
-        </div>
-
-        <div class="searchresult">
-            <h2>567</h2>
-            <a>link567</a> <button>▼</button>
-            <p>567</p>
-        </div>
-
-        <div class="searchresult">
-            <h2>789</h2>
-            <a>link789</a> <button>▼</button>
-            <p>789</p>
-        </div>
-
-        <div class="searchresult">
-            <h2>987</h2>
-            <a>link987</a> <button>▼</button>
-            <p>987</p>
-        </div>
-
-        <div class="searchresult">
-            <h2>098</h2>
-            <a>link098</a> <button>▼</button>
-            <p>098</p>
-        </div>
-
-        <div class="relatedsearches">
-            <h3>Podobne wyszukiwania</h3>
-            <div class="relatedlists">
-                <ul class="relatedleft">
-                    <li>liczby<br> <b>cyfry</b></li>
-                    <li><b>liczby</b> naturalne </li>
-                    <li><b>liczby</b> rzeczywiste </li>
-                    <li><b>liczby</b> calkowite</li>
-                </ul>
-                <ul class="relatedright">
-                    <li><b>liczby</b> od 1 do 3</li>
-                    <li><b>liczby</b> od 3 do 6</li>
-                    <li><b> liczby</b> od 6 do 9</li>
-                    <li><b>liczby</b> 098</li>
-                </ul>
+        <div class="up">
+            <div class="up_box">
+                <div class="up_items">
+                    <a class="other" href="https://mail.google.com">Gmail</a>
+                    <a class="other" href="https://www.google.pl/imghp?hl=pl">Grafika</a>
+                    <div class="g-menu">
+                        <img class="dots" src="g-menu.png">
+                    </div>
+                    <button class="blue" type="button" onclick="location.href='https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin'">Zaloguj się</button>
+                </div>
             </div>
         </div>
 
-        <div class="pagebar">
-            <ul class="pagelist">
-                
-       <table>
-            <tr>
-              <td><span class="blue">G</span></td>
-              <td><span class="red">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="yellow">o</span></td>
-              <td><span class="blue">g</span></td>
-              <td><span class="green">l</span></td>
-              <td><span class="red">e</span></td>
-              <td rowspan="2" style="width: 10px;"></td>
-              <td><span class="blue"><i class="fas fa-angle-right"></i></span></td>
-            </tr>
-            <tr>
-              <td class="pageNumber"></td>
-              <td class="pageNumber"></td>
-              <td class="pageNumber">1</td>
-              <td class="pageNumber">2</td>
-              <td class="pageNumber">3</td>
-              <td class="pageNumber">4</td>
-              <td class="pageNumber">5</td>
-              <td class="pageNumber">6</td>
-              <td class="pageNumber">7</td>
-              <td class="pageNumber">8</td>
-              <td class="pageNumber">9</td>
-              <td class="pageNumber">10</td>
-              <td colspan="3"></td>
-              <td class="pageNumber">Next</td>
-            </tr>
-          </table>
-            </ul>
+
+        <div class="this">
+            <div class="logo">
+                <img class="google" src="logo" alt="Google" height="92" width="272">
+            </div>
+
+            <div class="search">
+                <div class="write">
+                    <div class="visual1">
+                        <img class="lupa" src="lupa.png">
+                        <input type="search" maxlength="2048" title="Szukaj">
+                        <svg class="X" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                        <span class="linia"></span>
+                        <img class="klaw" src="klawiatura.png" title="Narzędzia do wprowadzania tekstu">
+                        <svg class="lupa2" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                    </div>
+                </div>
+                <div class="visual2">
+                    <div class="buttons">
+                        <button class="grey1" type="button" onclick="location.href='https://www.facebook.com'">Szukaj w Google</button>
+                        <button class="grey2" type="button" onclick="location.href='https://www.facebook.com'">Szczęśliwy traf</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="language">
+                <a class="lan1">Korzystaj z Google w tych językach: </a>
+                <a class="lan2" href="https://www.facebook.com">English</a>
+            </div>
         </div>
-    </div>
+        
 
-    <div id="footer">
-        <div id="footerlocation">
-   
-   <p> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAAA1BMVEVwdXoRE0AbAAAANElEQVR4nO3BMQEAAADCoPVP7WsIoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAN1+AABVhDU2QAAAABJRU5ErkJggg==" width=10px height=10px style="border-radius: 100%" > 43-316, Bielsko-Biała </p>
-          <p> - Na podstawie twojej wcześniejszej aktywności - Użyj dokładnej lokalizacji - Dowiedz się więcej</p>
+
+        <div class="aplikacje">
+            <div class="apki">
+                <svg class="ikonka" xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='rgba(0,0,0,.54)' d='M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z'/></svg>
+                <a class="ap" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Wszystko</a>
+            </div>
+            <div class="apki">
+                <svg focusable="false" width='24' height='24' viewBox="0 0 24 24"><path d="M12 11h6v2h-6v-2zm-6 6h12v-2H6v2zm0-4h4V7H6v6zm16-7.22v12.44c0 1.54-1.34 2.78-3 2.78H5c-1.64 0-3-1.25-3-2.78V5.78C2 4.26 3.36 3 5 3h14c1.64 0 3 1.25 3 2.78zM19.99 12V5.78c0-.42-.46-.78-1-.78H5c-.54 0-1 .36-1 .78v12.44c0 .42.46.78 1 .78h14c.54 0 1-.36 1-.78V12zM12 9h6V7h-6v2"></path></svg>
+                <a class="ap" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Wiadomości</a>
+            </div>
+            <div class="apki">
+                <svg focusable="false" width='24' height='24' viewBox="0 0 24 24"><path d="M14 13l4 5H6l4-4 1.79 1.78L14 13zm-6.01-2.99A2 2 0 0 0 8 6a2 2 0 0 0-.01 4.01zM22 5v14a3 3 0 0 1-3 2.99H5c-1.64 0-3-1.36-3-3V5c0-1.64 1.36-3 3-3h14c1.65 0 3 1.36 3 3zm-2.01 0a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h7v-.01h7a1 1 0 0 0 1-1V5"></path></svg>
+                <a class="ap" href="https://mail.google.com">Grafika</a>
+            </div>
+            <div class="apki">
+                <svg focusable="false" width='24' height='24' viewBox="0 0 16 16"><path d="M7.503 0c3.09 0 5.502 2.487 5.502 5.427 0 2.337-1.13 3.694-2.26 5.05-.454.528-.906 1.13-1.358 1.734-.452.603-.754 1.508-.98 1.96-.226.452-.377.829-.904.829-.528 0-.678-.377-.905-.83-.226-.451-.527-1.356-.98-1.959-.452-.603-.904-1.206-1.356-1.734C3.132 9.121 2 7.764 2 5.427 2 2.487 4.412 0 7.503 0zm0 1.364c-2.283 0-4.14 1.822-4.14 4.063 0 1.843.86 2.873 1.946 4.177.468.547.942 1.178 1.4 1.79.34.452.596.99.794 1.444.198-.455.453-.992.793-1.445.459-.61.931-1.242 1.413-1.803 1.074-1.29 1.933-2.32 1.933-4.163 0-2.24-1.858-4.063-4.139-4.063zm0 2.734a1.33 1.33 0 11-.001 2.658 1.33 1.33 0 010-2.658"></path></svg>
+                <a class="ap" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Mapy</a>
+            </div>
+            <div class="apki">
+                <svg focusable="false" width='24' height='24' viewBox="0 0 24 24"><path d="M10 16.5l6-4.5-6-4.5v9zM5 20h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1zm14.5 2H5a3 3 0 0 1-3-3V4.4A2.4 2.4 0 0 1 4.4 2h15.2A2.4 2.4 0 0 1 22 4.4v15.1a2.5 2.5 0 0 1-2.5 2.5"></path></svg>
+                <a class="ap" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Wideo</a>
+            </div>
+            <div class="apki">
+                <svg focusable="false" width='24' height='24' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                <a class="ap" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Więcej</a>
+            </div>
+            <div class="apki">
+                <img src=""/>
+                <a class="ap" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Ustawienia</a>
+            </div>
+            <div class="apki">
+                <img src=""/>
+                <a class="ap" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Narzędzia</a>
+            </div>
         </div>
 
-        <ul id="footermenu">
-            <li>Pomoc</li>
-            <li>Prześlij opinię</li>
-            <li>Prywatność</li>
-            <li>Warunki</li>
-        </ul>
-    </div>
+        <span class="linia_pozioma"></span>
 
-  </body>
+        <div class="ilosc_wynikow">
+            <a>Około 15 wyników (3,2 s)</a>
+        </div>
+
+        <div class="zawartosc">
+
+            <div class="wynik">
+                <div class="naglowek">
+                    <div class="hiperlacze">
+                        <div class="adres">
+                            <cite class="skrot">
+                                www.youtube.com
+                                <span class="rodzaj"> › watch</span>
+                            </cite>
+                        </div>
+                        <a class="tytul" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">radio</a>
+                    </div>
+                </div>
+
+                <div class="streszczenie">
+                    <span class="opis">
+                        123
+                    </span>
+                </div>
+            </div>
+
+            <div class="wynik">
+                <div class="naglowek">
+                    <div class="hiperlacze">
+                        <div class="adres">
+                            <cite class="skrot">
+                                www.youtube.com
+                                <span class="rodzaj"> › watch</span>
+                            </cite>
+                        </div>
+                        <a class="tytul" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">radiof1</a>
+                    </div>
+                </div>
+
+                <div class="streszczenie">
+                    <span class="opis">
+                        tekst tekst tekst...
+                    </span>
+                </div>
+            </div>
+
+            <div class="wynik">
+                <div class="naglowek">
+                    <div class="hiperlacze">
+                        <div class="adres">
+                            <cite class="skrot">
+                                www.youtube.com
+                                <span class="rodzaj"> › watch</span>
+                            </cite>
+                        </div>
+                        <a class="tytul" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">gogogogo</a>
+                    </div>
+                </div>
+
+                <div class="streszczenie">
+                    <span class="opis">
+                        tekst tekst tekst 12345...
+                    </span>
+                </div>
+            </div>
+
+            <div class="wynik">
+                <div class="naglowek">
+                    <div class="hiperlacze">
+                        <div class="adres">
+                            <cite class="skrot">
+                                www.youtube.com
+                                <span class="rodzaj"> › watch</span>
+                            </cite>
+                        </div>
+                        <a class="tytul" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">wszystkie</a>
+                    </div>
+                </div>
+
+                <div class="streszczenie">
+                    <span class="opis">
+                        te same linki...
+                    </span>
+                </div>
+            </div>
+
+            <div class="wynik">
+                <div class="naglowek">
+                    <div class="hiperlacze">
+                        <div class="adres">
+                            <cite class="skrot">
+                                www.youtube.com
+                                <span class="rodzaj"> › watch</span>
+                            </cite>
+                        </div>
+                        <a class="tytul" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">YT</a>
+                    </div>
+                </div>
+
+                <div class="streszczenie">
+                    <span class="opis">
+                        tekst tekst tekst...
+                    </span>
+                </div>
+            </div>
+
+            <div class="wynik">
+                <div class="naglowek">
+                    <div class="hiperlacze">
+                        <div class="adres">
+                            <cite class="skrot">
+                                www.youtube.com
+                                <span class="rodzaj"> › watch</span>
+                            </cite>
+                        </div>
+                        <a class="tytul" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">1236</a>
+                    </div>
+                </div>
+
+                <div class="streszczenie">
+                    <span class="opis">
+                        123543567876
+                    </span>
+                </div>
+            </div>
+
+            <div class="wynik">
+                <div class="naglowek">
+                    <div class="hiperlacze">
+                        <div class="adres">
+                            <cite class="skrot">
+                                www.youtube.com
+                                <span class="rodzaj"> › watch</span>
+                            </cite>
+                        </div>
+                        <a class="tytul" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">tekst123</a>
+                    </div>
+                </div>
+
+                <div class="streszczenie">
+                    <span class="opis">
+                        wynik
+                    </span>
+                </div>
+            </div>
+
+            <div class="wynik">
+                <div class="naglowek">
+                    <div class="hiperlacze">
+                        <div class="adres">
+                            <cite class="skrot">
+                                www.youtube.com
+                                <span class="rodzaj"> › watch</span>
+                            </cite>
+                        </div>
+                        <a class="tytul" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">123</a>
+                    </div>
+                </div>
+
+                <div class="streszczenie">
+                    <span class="opis">
+                        123786326ihfg...
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="down">
+            <div class="country">Polska</div>
+            <div class="links">
+                <div class="el1">
+                    <a class="bottom_text" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">O nas</a>
+                    <a class="bottom_text" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Reklamuj się</a>
+                    <a class="bottom_text" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Dla firm</a>
+                    <a class="bottom_text" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Jak działa wyszukiwarka</a>
+                </div>
+                <div class="el2">
+                    <div class="neutral">
+                        <img class="lisc" src="lisc.png">
+                        <a class="bottom_text_nat" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Silnik robi wrum</a>                        
+                    </div>
+                </div>
+                <div class="el3">
+                    <a class="bottom_text" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Prywatność</a>
+                    <a class="bottom_text" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Warunki</a>
+                    <a class="bottom_text" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Ustawienia</a>    
+                </div>
+            </div>
+
+            <div class="links2">
+                <div class="elementy_dolne">
+                    <a class="links2el" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Pomoc</a>
+                    <a class="links2el" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Prześlij opinię</a>
+                    <a class="links2el" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Prywatność</a>
+                    <a class="links2el" href="https://www.youtube.com/watch?v=YsNJrhuMf5w">Warunki</a>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
 </html>
