@@ -1,568 +1,458 @@
-<!DOCTYPE html>
-<html>
-<title>Web Page Design</title>
-<head>
-
-<style type="text/css">
-
-.gb_ae 
+html, body
 {
-    
-   font-family: 'Roboto', sans-serif;
-    font-weight: 550;
-    font-size: 16px;
-   
-    letter-spacing: .25px;
-    line-height: 16px;
-    margin-left: 10px;
-    margin-right: 8px;
-    min-width: 96px;
-    padding: 9px 23px;
-    text-align: center;
-    vertical-align: middle;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color:white;
+    height: 100%;
 }
 
 
-
-
-.center 
+body
 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
-  width:27%;
-
-     padding-top:50px;
-    
-text-align:center;
-    
-}
-
-
-.okienko_wyszukiwania
-{
-    
-      border-radius: 25px;
-      border: 0.3px solid ;
-      border-color: light gray;
-      padding: 2px;
-      width: 500px;
-      height:35px;
-     
-}
-
-
-.logowanie
-{
-    background: #1a73e8;
-    border: 1px solid transparent;
-    
-    height:40px;   
-    border-radius: 3px;
-    margin-right: 90px;
-  font-family: 'Roboto', sans-serif;
-    
-}
-
-.czcionka
-{
-     font-family: 'Roboto', sans-serif;
-    font-size:24 ;
-      text-align: center;
-}
-
-
-
-.ikony
-{
-    
-    margin-left: 2px;
-    margin-right: 6px;
-    margin-top:0.65px;
-
-    }
-
-.ikona
-{
-    
-    margin-left: 8px;
-    margin-right: 2px;
-    margin-top:7.5px;
-}
-
-
-    
-
-.przyciski
-{
-  text-align: center;
-  padding-top: 35px;
-  margin-bottom: 100px;
-
-  font-size: 24px ;
-    height: 40px;
-}
-
-
-.a
-{
- text-align: center;
-  display: block;
-  margin: auto;
-  margin-top:310px;
-  clear: both;
-  
-}
-
-
-ul {
-  list-style: none;
-}
-
-.footer-right {
-  float: right;
-margin-bottom: 0; 
-    
-}
-
-footer ul li {
-  display: inline;
-  color: #666666;
-  font-size: 14px;
-  padding: 13px;
-}
-
-footer ul {
-  float: left;
-  padding: 1px;
-}
-
-footer ul a:hover {
-  text-decoration: underline;
-}
-
-
-a2 {
-  text-decoration: none;
-  color: inherit;
-font-family: 'Roboto', sans-serif;
-    font-size: 16px ;
-    
-    
-}
-
-
-.footer-left {
-   text-align: center;
-   margin-bottom: 0; 
-   padding-top: 10px;
-    
- }
-
-
-.obramowanie 
-{
-    width:100%;
-    height:5%;
-    border-bottom: 1px solid #dadce0;
-    font-size: 15px;
-    color: rgba(0,0,0,.54);
-}
-
-
-footer  {
-  background: #f2f2f2;
-  border-top: solid 2px #e4e4e4;
-/*   position: fixed; */
- margin-top:461px;
-  bottom: 0;
-  padding-bottom: 0;
-  width: 100%;
-  
-}
-
-.uU7dJb {
-    padding: 15px 30px;
-    border-bottom: 1px solid #dadce0;
-    font-size: 15px;
-    color: rgba(0,0,0,.54);
-}
-
-
-
-</style>
-
-
-</head>
-
-
-<body>
-
-
-<!--Logo-->
-<img src="https://www.google.pl/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" class="a">
-
-<!--Lupa i Klawiatura w okienku wyszukiwania-->
-<div class="center"><div class="okienko_wyszukiwania"><div class="ikona"> <img src="https://icon-library.com/images/google-search-icon/google-search-icon-14.jpg" align="left" height=15px><div class="ikony"> <img src="http://bizweb.dktcdn.net/100/093/811/themes/116804/assets/main_menu_icon_1.png?1605862991921" align="right"  height=20px></div></div></div></div>
-
-
-<!--Zaloguj się-->
-
-<div class="logowanie" style="position: absolute; top: 0.4%; right: 0; width: 155px; text-align:right;"><div class="gb_ae"> Zaloguj się</div></div>
-
-
-<!--Przyciski pod wyszukiwaniem-->
-
-<div class="przyciski" ><input type="submit" value="Szukaj w Google " id="google_search">
-      <input type="submit" value="Szczęśliwy traf" id="im_feeling_lucky"  >
-    </div>
-
-
-<!--przycisk Aplikacje -->
-<img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png" style="position: absolute; top: 0.5%; right: 14%; width: 32px; text-align:right;"> 
-
-<!--Górny prawy róg -->
-<div class="czcionka" style="position: absolute; top: 1%; right: 18.5%; width: 32px; text-align:right;"> Grafika </div>
-<div class="czcionka" style="position: absolute; top: 1%; right: 21.8%; width: 32px; text-align:right;"> Gmail </div>
-
-
-
-<!--Polska -->
-
-<ul class="footer-left" style="position: absolute; bottom: 45px; left:0">
- <li><a2 href="#">Polska</a2></li>
-
-        </ul>
-    
-
-<!--Dolny pasek-->
-
-<footer>
- 
-   <ul class="footer-left"  style="position: absolute; bottom: 5px; left:1.6%">
-          <li><a2 href="#">O nas</a2></li>
-          <li><a2 href="#">Reklamuj się</a2></li>
-          <li><a2 href="#">Dla firm</a2></li> 
-          <li><a2 href="#">Jak działa wyszukiwarka</a2></li> 
-       
-        </ul>
-         <ul class="footer-right" style="position: absolute; bottom: 5px; right:1%;" >    
-          <li><a2 href="#">Prywatność</a2></li>
-          <li><a2 href="#">Warunki</a2></li>
-          <li><a2 href="#">Ustawienia</a2></li>
-     
-        </ul>       
-   
-    </footer>      
-  
-</html>
-
-
-
-
-gb_ae 
-{
-
-   font-family: 'Roboto', sans-serif;
-    font-weight: 550;
-    font-size: 16px;
-
-    letter-spacing: .25px;
-    line-height: 16px;
-    margin-left: 10px;
-    margin-right: 8px;
-    min-width: 96px;
-    padding: 9px 23px;
-    text-align: center;
-    vertical-align: middle;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color:white;
-}
-
-*{
-	padding: 0;
-	margin:0;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-family: arial, sans-serif;
-}
-
-body {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-nav {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 30px;
-    margin-top: 14px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;
+    margin: 0;
 }
 
-nav a {
-    font-size: 13px;
+.links2
+{
+    display: none;
+}
+
+.aplikacje
+{
+    display:none;
+}
+
+.ilosc_wynikow
+{
+    display: none;
+}
+
+.kreska_pozioma
+{
+    display: none;
+}
+
+.zawartosc
+{
+    display: none;
+}
+
+.iks
+{
+    display: none;
+}
+
+.lupa2
+{
+    display: none;
+}
+
+
+.up
+{
+    padding: 10px;
+}
+
+.up_box
+{
+    display: grid;
+    justify-content: right;
+    padding-left: 32px;
+}
+
+.up_items
+{
     display: inline-block;
-    line-height: 24px;
-    font-weight: 400;
-    color: rgb(0,0,0, 0.87);
-	  cursor: pointer;
-	  padding: 5px 6.7px
+    flex-grow: 1;
+    align-items: center;
 }
 
-nav a:hover {
-	text-decoration: underline;
-	opacity: .85;
-}
-
-
-.gb_ae 
+.other:hover
 {
-
-   font-family: 'Roboto', sans-serif;
-    font-weight: 550;
-    font-size: 16px;
-
-    letter-spacing: .25px;
-    line-height: 16px;
-    margin-left: 10px;
-    margin-right: 8px;
-    min-width: 96px;
-    padding: 9px 23px;
-    text-align: center;
-    vertical-align: middle;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color:white;
+    text-decoration: underline;
 }
-
-.center 
-{
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-
-  width:27%;
-
-
-  
-	text-align:center;  
-}
-
-
-.okienko_wyszukiwania
-{
-      border-radius: 25px;
-    border: 1px solid #f8f9fa;
-      border-color: ;
-      padding: 2px;
-
-      height:35px;
-     background-color: #f8f9fa;
-	color: #3c4043;
-width: 580px;
-	margin: 0px auto;
-	position: relative;
-	margin-top: -8px;
-	text-align: center;
-}
-
-
-
-.logowanie
-{
-    background: #1a73e8;
-    border: 1px solid transparent;
-
-    height:40px;   
-    border-radius: 3px;
-    margin-right: 90px;
-  font-family: 'Roboto', sans-serif;
-
-}
-
-.czcionka
-{
-     font-family: 'Roboto', sans-serif;
-    font-size:16px ;
-      text-align: center;
-}
-
-
-
-.ikony
-{
-
-    margin-left: 2px;
-    margin-right: 6px;
-    margin-top:0.3px;
-
-    }
-
-.ikona
-{
-    
-    margin-left: 8px;
-    margin-right: 2px;
-    margin-top:7.5px;
-}
-
-przyciski
-{
-  text-align: center;
-  padding-top: 35px;
-  margin-bottom: 100px;
-
-  font-size: 24px ;
-    height: 40px;
-	align-content: start;
-
-}
-
 
 a
 {
- text-align: center;
-  display: block;
-  margin-top:300px;
-  margin-bottom: 28px;
-  margin-left:auto;
-  margin-right:auto;
-  clear: both;
-
+    color: rgba(0,0,0,0.87);
+    text-decoration: none;
+    padding-right: 15px;
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
 }
 
-
-footer ul a:hover {
-  text-decoration: underline;
-}
-
-a2 {
-  text-decoration: none;
-  color: inherit;
-font-family: 'Roboto', sans-serif;
-    font-size: 16px ;
-
-
-}
-
-
-.obramowanie 
+.blue
 {
-    width:100%;
-    height:5%;
+    display: inline-block;
+    margin-left: 8px;
+    color: #fff;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: .25px;
+    line-height: 16px;
+    margin-right: 8px;
+    min-width: 118px;
+    padding: 9px 23px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.kropeczki
+{
+    display: inline-block;
+    padding: 4px;
+    padding-right: 11px;
+    vertical-align: middle;
+}
+
+.dots
+{
+    max-height: 23px;
+    margin: auto;
+}
+
+
+
+
+.this
+{
+    padding-bottom: 70px;
+}
+
+
+.logo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 7px;
+}
+
+.google
+{
+    max-height: 92px;
+}
+
+.search
+{
+    display: block;
+    justify-content: center;
+    grid-template-rows: 50% 50%;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.write
+{
+    width: auto;
+    max-width: 584px;
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 39px;
+    margin: 0 auto;
+    padding-top: 6px;
+}
+
+.visual1
+{
+    flex: 1;
+    display: flex;
+    padding: 5px 8px 0 16px;
+    padding-left: 14px;
+}
+
+img.lupa
+{
+    margin: auto;
+    height: 20px;
+    padding-bottom: 10px;
+}
+
+img.klaw
+{
+    margin: auto;
+    height: 13px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+input
+{
+    background-color: transparent;
+    margin: 0;
+    border: none;
+    padding: 0;
+    padding-bottom: 10px;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    height: 34px;
+    font-size: 16px;
+    font-family: arial,sans-serif;
+    -webkit-appearance: textfield;
+    font-weight: 400;
+    text-align: start;
+}
+
+.write:hover,
+.write:focus {
+    box-shadow: 0 0 0.3em 0.1em #d9d9d9;
+}
+
+
+
+
+
+.visual2
+{
+    height: 70px;
+}
+
+.buttons
+{
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.grey1 
+{
+    display: inline-block;
+    background-color: #F8F9FA;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grey1:hover,
+.grey1:focus {
+    box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
+    border: 1px solid #d9d9d9;
+}
+
+.grey2
+{
+    display: inline-block;
+    background-color: #F8F9FA;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grey2:hover,
+.grey2:focus {
+    box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
+    border: 1px solid #d9d9d9;
+}
+
+
+
+
+
+
+.language
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;;
+}
+
+a.lan1
+{
+    padding-right: 7px;
+}
+
+a.lan2
+{
+    padding: 0;
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.lan2:hover
+{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.down
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f2f2f2;
+}
+
+.country
+{
+    padding: 13px 30px;
     border-bottom: 1px solid #dadce0;
     font-size: 15px;
     color: rgba(0,0,0,.54);
 }
 
-.buttons{
-  margin-top:30px;
-  margin-left:auto;
-  margin-right:auto;
-  align-content: start;
-
+.links
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-
-.button{
-  background-color: #f5f5f5;
-  border:none;
-  color:#707070;
-  font-size:15px;
-  padding: 10px 20px;
-  margin:5px;
-  border-radius:4px;
-  outline:none;
-}
-
-
-
-.button:hover{
-  border: 1px solid #c8c8c8;
-  padding: 9px 19px;
-  color:#808080;
-}
-
-
-.button:focus{
-  border:1px solid #4885ed;
-  padding: 9px 19px;
-}
-
-
-.uU7dJb {
-    padding: 15px 30px;
-    border-bottom: 1px solid #dadce0;
-    font-size: 15px;
-    color: rgba(0,0,0,.54);
-}
-
-
-footer {
-	background: #f2f2f2;
-	 position:absolute;
-   bottom:0;
-   width:100%;
-}
-
-
-
-footer a {
-	color: rgba(0,0,0, 0.54);
-	display: inline-block;
-	padding: 12px 11.3px;
-	font-size: 14px;
-
-}
-
-
-.links {
-	border-top: 1px solid #ddd;
-	display: flex;
-	color: #70757a;
-	padding: 5px 0px;
-}
-
-.link_1 {
-	padding-left: 18.7px;
-	flex: 1;
-	justify-content: flex-start;
-    min-width: 40%;
+.el1
+{
+    text-align: left;
+    min-width: 30%;
     order: 1;
 }
 
+.el2
+{
+    order: 2;
+}
 
-.link_2 {
-	padding-left: 18.7px;
-	order: 2;
-	flex: 1;
+.el3
+{
+    min-width: 30%;
+    text-align: right;
+    order: 3;
+}
+
+.bottom_text
+{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #70757a;
+    display: inline-block;
+    padding: 13px;
+    white-space: nowrap;
+}
+
+.bottom_text_nat
+{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #70757a;
+    display: inline-block;
+    padding: 13px;
+    padding-left: 0;
+    white-space: nowrap;
+}
+
+img.leaf
+{
+    height: 14px;
+    margin-right: 3px;
+}
+
+.neutral
+{
+    padding-left: 10px;
 }
 
 
-.link_2 .leaf {
-	height: 15px;
-	padding-right: 5px;
+
+
+
+
+
+@media only screen and (max-width: 600px) 
+{
+    .links
+    {
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .el2 
+    {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .el1
+    {
+        order: 2;
+        text-align: center;
+        width: 100%;
+    }
+
+    
+
+    .el3
+    {
+        order: 3;
+        text-align: center;
+        width: 100%;
+    }
 }
 
-.link_3 {
-	padding-right: 18.7px;
-	order: 3;
-	justify-content: flex-end;
-}
+@media only screen and (max-width: 1200px)
+{
+    .links
+    {
+        justify-content: space-evenly;
+        text-align: center;
+    }
 
-.Pb9hCb {
-    height: 11px;
-    margin-right: 6px;
+    .el2 
+    {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .el1
+    {
+        order: 2;
+        text-align: center;
+        min-width: 30%;
+    }
+
+    
+
+    .el3
+    {
+        order: 3;
+        text-align: center;
+        min-width: 30%;
+    }
+}
