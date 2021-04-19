@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Wyszukiwarka Google</title>
+    <link rel="icon"  href="icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styleWyniki.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./cities.js"></script>
+  </head>
+
+  <body> 
+    <div id="app" :class="[googleSearch.length > 0 ? 'results' : 'home']"> 
+      
+    <nav class="nav_tools">
+        <a href ="#">Gmail</a>
+        <a href ="#">Grafika</a>
+        <img src="przyciski.png" class="google_apps" role="button"></img>
+        <button>Zaloguj się</button>
+    </nav>
+
+    <section class="search">
+        <img src="google.png" class="logo">
+        <form><br><br>
+            <div class="search_elements">
+                <input ref="first" v-model="googleSearch" type="text" class="search_input"/>
+                <img src="lupka.png" class="search_lupa"/>
+                <img src="mikro.png" class="search_mikrofon"/>
+                <input type="button" class="search_button" value="Szukaj w google"/>
+                <input type="button" class="search_button" value="Szczęśliwy traf"/>
+            </div>
+        </form>
+    </section>
+
+    <footer class="foot">
+        <h4>Polska</h4>
+        <div class="info">
+            <div class="info_1">
+                <a href="#">O nas</a>
+                <a href="#">Reklamuj się</a>
+                <a href="#">Dla firm</a>
+                <a href="#">Jak działa wyszukiwarka</a>
+            </div>
+            <div class="info_3">
+                <a href="#">Prywatność</a>
+                <a href="#">Warunki</a>
+                <a href="#">Ustawienia</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div class="topbar">
+
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="">
+
+        <ul class="accountOptions">
+          <li><a href="#"><img src="przyciski.png" class="google_apps" role="button"></a></li>
+          <li><button class="signIn" type="button" name="button">Zaloguj się</button></li>
+        </ul>
+
+        <div class="searchgoogle">
+
+          <div class="elements">
+            <input ref="second" type="text" v-model="googleSearch">
+            <img src="lupa2.png" class="lupa">
+            <img src="mikro.png" class="mikrofon">
+            <img src="klaw.png" class="klawiatura">
+            <div class="line"></div>
+            <img src="iks.png" class="iks">
+          </div>
+
+          <ul class="optionsbar">
+            <li class="lewo all"><a href="#">Wszystko</a></li>
+            <li class="lewo"><a href="#">Wiadomości</a></li>
+            <li class="lewo"><a href="#">Grafika</a></li>
+            <li class="lewo"><a href="#">Wideo</a></li>
+            <li class="lewo"><a href="#">Mapy</a></li>
+            <li class="lewo"><a href="#">Więcej</a></li>
+            <li class="prawo"><a class="tools" href="#">Narzędzia</a></li>
+            <li class="prawo"><a href="#">Ustawienia</a></li>
+          </ul>
+          
+        </div>
+
+    </div> 
+
+    <div class="searchResults">
+
+        <p class="searchnumber">Około 15 wyników (2,4 s)</p>
+
+        <div class="cities">
+          <a class="link">Lista miast:</a>
+          <ul>
+            <li v-for="city in filteredCities">
+              {{ city.name }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="result">
+            <a class="link" href="#">https://www.formula1.com
+                </a>
+            <h2><a href="#">Formuła 1 Strona Oficjalna</a></h2>
+            <p>Szybkie samochody, najlepsi kierowcy. Sezon 2021 już się rozpoczął. Czekamy na emocjonujące Grand Prix Imola...</p>
+        </div>
+    
+        <div class="result">
+            <a class="link" href="#">https://www.formula1.com
+                </a>
+            <h2><a href="#">Tak naprawdę też strona główna</a></h2>
+            <p>Szybkie Autka robią wroom ...</p>
+        </div>
+    
+        <div class="result">
+            <a class="link" href="#">https://www.formula1.com
+                F1</a>
+            <h2><a href="#">kierowcy, auta, formula 1</a></h2>
+            <p>obejrzyj na żywo dzieki transmisji live</p>
+        </div>
+    
+        <div class="result">
+            <a class="link" href="#">https://www.formula1.com
+                </a>
+            <h2><a href="#">Sbinolla komentuje wystep Sainza JR</a></h2>
+            <p>P8 is not a bad place for a ferrari debut ...</p>
+        </div>
+    
+        <div class="result">
+            <a class="link" href="#">https://www.formula1.com
+                formula 1</a>
+            <h2><a href="#">Get in there Lewis ...</a></h2>
+            <p>Valterri its James, hold your position</p>
+        </div>
+    
+    
+    
+        <div class="result">
+            <a class="link" href="#">https://www.formula1.com</a>
+            <h2><a href="#">James</a></h2>
+            <p>James its Valteri ...</p>
+        </div>
+    
+        <div class="result">
+            <a class="link" href="#">https://www.formula1.com</a>
+            <h2><a href="#">Redbull dominuje testy zimowe ...</a></h2>
+            <p>Są szybsi niż mercedes?...</p>
+        </div>
+    
+        <div class="result">
+            <a class="link" href="#">https://www.formula1.com</a>
+            <h2><a href="#">Kłopoty, klopoty Lewis</a></h2>
+            <p>2 redbule atakuja, kto zdobędzie pole position ...</title></p>
+        </div>
+
+        <br>
+
+        <div class="help">
+
+          <h3>Podobne wyszukiwania</h3>
+            <div class="helplists">
+                <ul class="helpleft">
+                    <a id="helpbar1" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">James its valteri</a>
+                    <a id="helpbar2" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">formula pierwsza</a>
+                    <a id="helpbar3" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">Grand Prix Bahrain</a>
+                    <a id="helpbar4" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">forumla 1</a>
+                </ul>
+                <ul class="helpright">
+                    <a id="helpbar5" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">najszybsze auta</a>
+                    <a id="helpbar6" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">SF21</a>
+                    <a id="helpbar7" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">formula 2</a>
+                    <a id="helpbar8" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">formula 3</a>
+                </ul>
+            </div>
+
+        </div>
+
+        <br><br>
+
+          <table class="googlelist">
+            <tr>
+              <td><span class="blue">G</span></td>
+              <td><span class="red">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="yellow">o</span></td>
+              <td><span class="blue">g</span></td>
+              <td><span class="green">l</span></td>
+              <td><span class="red">e</span></td>
+              <td rowspan="2" style="width: 10px;"></td>
+              <td><span class="blue arrow">></span></td>
+            </tr>
+
+            <tr>
+              <td class="numer"></td>
+              <td class="numer">1</td>
+              <td class="numer">2</td>
+              <td class="numer">3</td>
+              <td class="numer">4</td>
+              <td class="numer">5</td>
+              <td class="numer">6</td>
+              <td class="numer">7</td>
+              <td class="numer">8</td>
+              <td class="numer">9</td>
+              <td class="numer">10</td>
+              <td colspan="3"></td>
+              <td class="numer">Następna</td>
+            </tr>
+
+          </table>
+
+      </div>
+
+      <div class="infopasek">
+
+        <div class="locationpasek">
+        <p>
+          <a class="panstwo">Polska</a>
+          <a class="miasto"><strong>Żywiec</strong> - Na podstawie Twojej wcześniejszej aktywności </a>
+          <a class ="inne">- Użyj dokładnej lokalizacji</a><a class ="loc_more"> - Dowiedz się więcej</a>
+        </p>
+      </div>
+
+        <ul>
+            <li><a href="#">Pomoc</a></li>
+            <li><a href="#">Prześlij opinię</a></li>
+            <li><a href="#">Prywatność</a></li>
+            <li><a href="#">Warunki</a></li>
+        </ul>
+        
+      </div>
+    </div>
+</body>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      googleSearch: '',
+      cities: window.cities,
+    },
+
+    computed: {
+      filteredCities: function() {
+        let result = this.cities.filter(city => city.name.includes(this.googleSearch));
+        if(result.length>10){
+          return result.slice(1,11);
+        }
+        return result;
+      }
+    },
+
+    updated() {
+        this.$nextTick(() => {
+
+        if (this.googleSearch.length > 0) {
+
+        this.$refs.second.focus();
+
+        } else {
+
+        this.$refs.first.focus();
+
+        }
+      })
+    }
+});
+</script>
+</html>
