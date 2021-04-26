@@ -259,36 +259,29 @@
 
 <script>
   var app = new Vue({
-    el: '#app',
-    data: {
-      googleSearch: '',
-      cities: window.cities,
-    },
-
-    computed: {
-      filteredCities: function() {
-        let result = this.cities.filter(city => city.name.includes(this.googleSearch));
-        if(result.length>10){
-          return result.slice(1,11);
-        }
-        return result;
-      }
-    },
-
-    updated() {
-        this.$nextTick(() => {
-
-        if (this.googleSearch.length > 0) {
-
-        this.$refs.second.focus();
-
-        } else {
-
-        this.$refs.first.focus();
-
-        }
-      })
-    }
-});
+               el: "#app",
+               data: {
+                   googleSearch:"",
+                   wyszukaj:"",
+                   cities: window.cities,
+               },
+               computed: {
+                   filtredCities() {
+                       let result = this.cities.filter(miasto => miasto.name.startsWith(this.googleSearch) || miasto.name.toLowerCase().startsWith(this.googleSearch));
+                       if (this.googleSearch.length > 0) {
+                           return result.slice(0, 10);
+                       }
+                   }
+               },
+               methods: {
+                   potwierdz() {
+                       this.wyszukaj = this.googleSearch
+                   },
+                   uzupelnij(miasto) {
+                       this.googleSearch = miasto.name;
+                       this.wyszukaj = this.googleSearch;
+                   },
+               }
+           })
 </script>
 </html>
