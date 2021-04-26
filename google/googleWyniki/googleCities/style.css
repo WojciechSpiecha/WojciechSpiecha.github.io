@@ -17,6 +17,198 @@ div.home  {
 	min-height: 100vh;
 }
 
+.home .main
+{
+    position: relative;
+    top: 145px;
+    height:10fr;
+    width: 100%;
+}
+
+.home .logo{
+	text-align: center;
+}
+
+.home .google
+{
+    max-height: 92px;
+}
+
+.home .wyszukaj
+{
+    display: block;
+    justify-content: center;
+    grid-template-rows: 50% 50%;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+	width: 500px;
+}
+
+.home .pasek
+{
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    padding-bottom: 5px;
+}
+
+.home .text
+{
+    display: flex;
+    height: 40px;
+    margin: 0 auto;
+    width: 450px;
+    max-width: 584px;
+}
+
+.home ul
+{
+    display: block;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.home ul:hover,
+.home ul:focus 
+{
+    box-shadow: 0 0 0.3em 0.1em #d9d9d9;
+}
+
+.home .widok
+{
+    flex: 1;
+    display: flex;
+    padding: 5px 8px 0 16px;
+}
+
+.home img.lupa
+{
+    margin: auto;
+    height: 23px;
+    cursor: pointer;
+}
+
+.home img.lupa1
+{
+    margin-top: 3px;
+	padding-left: 22px;
+	padding-top: 9px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.home img.klaw
+{
+    margin: auto;
+    height: 18px;
+	padding-top: 2px;
+	padding-left: 10px ;
+    cursor: pointer;
+}
+
+.home img.mikro
+{
+    margin: auto;
+    height: 28px;
+	padding-left: 15px;
+    cursor: pointer;
+}
+
+.home input
+{
+    background-color: transparent;
+    margin-top: 5px;
+	margin-left: 5px;
+    border: none;
+    padding-right: 0;
+    padding-bottom: 10px;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    height: 34px;
+	width: 280px;
+    font-size: 18px;
+    font-family: arial,sans-serif;
+    -webkit-appearance: textfield;
+    font-weight: 400;
+    text-align: start;
+}
+
+.home.rozwiniety:hover,
+.home.rozwiniety:focus 
+{
+    box-shadow: 0 0 0.3em 0.1em #d9d9d9;
+}
+
+.przyciski
+{
+    height: 70px;
+}
+
+.buttons
+{
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.przycisk1 
+{
+    display: inline-block;
+    background-color: #F8F9FA;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.przycisk1:hover,
+.przycisk1:focus 
+{
+    box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
+    border: 1px solid #d9d9d9;
+}
+
+.przycisk2
+{
+    display: inline-block;
+    background-color: #F8F9FA;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.przycisk2:hover,
+.przycisk2:focus 
+{
+    box-shadow: 3px 6px 0.2em -0.3em #d9d9d9;
+    border: 1px solid #d9d9d9;
+}
+
+
 .home nav.nav_tools {
     display: flex;
     align-items: center;
@@ -63,86 +255,6 @@ div.home  {
 	cursor: pointer;
 }
 
-.home .search {
-	position: relative;
-    top: 100px;
-    height:10fr;
-    text-align: center;
-    width: 100%;
-}
-
-.home .search .logo {
-	width: 272px;
-	height: 92px;
-	display: block;
-	margin: 0px auto;
-	margin-top: 75px;
-}
-
-.home .search_elements {
-	width: 580px;
-	margin: 0px auto;
-	position: relative;
-	margin-top: -8px;
-	text-align: center;
-}
-
-.home .search_elements .search_input {
-	display: block;
-	border: 1px solid #ddd;
-	font-size: 16px;
-	padding: 13px;
-	padding-left: 45px;
-	border-radius: 25px;
-	width: 100%;
-	transition: box-shadow 100ms;
-	outline: none;
-	cursor: auto;
-}
-
-.home .search_elements .search_input:hover {
-	border: 1px solid #fff;
-	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);
-}
-
-.home .search_elements .search_lupa {
-	width: 20px;
-	opacity: .4;
-	position: absolute;
-	top: 13px;
-	left: 14px;
-}
-
-.home .search_elements .search_mikrofon {
-	width: 23px;
-	position: absolute;
-	top: 13px;
-	right: 20px;
-	cursor: pointer;
-}
-
-.home .search_elements .search_button {
-	border: 1px solid #f8f9fa;
-	padding: 9px 15px;
-	background-color: #f8f9fa;
-	color: #3c4043;
-	height: 36px;
-    min-width: 54px;
-	font-size: 14px;
-	border-radius: 4px;
-	display: inline-block;
-	text-align: center;
-	margin-right: 10px;
-	margin-top: 30px;
-	outline: none;
-	cursor: pointer;
-	transition: border-color 100ms;
-}
-
-.home .search_elements .search_button:hover {
-	box-shadow: 0 0 3px rgba(172, 172, 172, 0.822);
-}
-
 .home footer.foot {
 	background-color: rgb(242,242,242);
     position: absolute;
@@ -169,8 +281,7 @@ div.home  {
 	color: rgba(0,0,0, 0.54);
 	display: inline-block;
 	padding: 12px 11.3px;
-	font-size: 14px;
-	
+	font-size: 14px;	
 }
 
 .home footer.foot a:hover {
