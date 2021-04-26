@@ -179,16 +179,16 @@
           <h3>Podobne wyszukiwania</h3>
             <div class="helplists">
                 <ul class="helpleft">
-                    <a id="helpbar1" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">James its valteri</a>
-                    <a id="helpbar2" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">formula pierwsza</a>
-                    <a id="helpbar3" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">Grand Prix Bahrain</a>
-                    <a id="helpbar4" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">forumla 1</a>
+                    <a id="helpbar1" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">JavaScript download</a>
+                    <a id="helpbar2" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">JavaScript program</a>
+                    <a id="helpbar3" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">JavaScript kurs</a>
+                    <a id="helpbar4" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">JavaScript pomoc</a>
                 </ul>
                 <ul class="helpright">
-                    <a id="helpbar5" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">najszybsze auta</a>
-                    <a id="helpbar6" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">SF21</a>
-                    <a id="helpbar7" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">formula 2</a>
-                    <a id="helpbar8" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">formula 3</a>
+                    <a id="helpbar5" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">JavaScript podstawy</a>
+                    <a id="helpbar6" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">JavaScript basics</a>
+                    <a id="helpbar7" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">JavaScript tutorial</a>
+                    <a id="helpbar8" type="text"><img src="lupa1.webp" class="lupka" alt="Lupa Google" href="#">JavaScript help</a>
                 </ul>
             </div>
 
@@ -241,7 +241,7 @@
         <div class="locationpasek">
         <p>
           <a class="panstwo">Polska</a>
-          <a class="miasto"><strong>Żywiec</strong> - Na podstawie Twojej wcześniejszej aktywności </a>
+          <a class="miasto"><strong>Kraków</strong> - Na podstawie Twojej wcześniejszej aktywności </a>
           <a class ="inne">- Użyj dokładnej lokalizacji</a><a class ="loc_more"> - Dowiedz się więcej</a>
         </p>
       </div>
@@ -258,30 +258,30 @@
 </body>
 
 <script>
-  var app = new Vue({
-               el: "#app",
-               data: {
-                   googleSearch:"",
-                   wyszukaj:"",
-                   cities: window.cities,
-               },
-               computed: {
-                   filtredCities() {
-                       let result = this.cities.filter(miasto => miasto.name.startsWith(this.googleSearch) || miasto.name.toLowerCase().startsWith(this.googleSearch));
-                       if (this.googleSearch.length > 0) {
-                           return result.slice(0, 10);
-                       }
-                   }
-               },
-               methods: {
-                   potwierdz() {
-                       this.wyszukaj = this.googleSearch
-                   },
-                   uzupelnij(miasto) {
-                       this.googleSearch = miasto.name;
-                       this.wyszukaj = this.googleSearch;
-                   },
-               }
-           })
+   var app = new Vue({
+                el: "#app",
+                data: {
+                    googleSearch:"",
+                    wyszukaj:"",
+                    cities: window.cities,
+                },
+                computed: {
+                    filtredCities() {
+                        let result = this.cities.filter(miasto => miasto.name.startsWith(this.googleSearch) || miasto.name.toLowerCase().startsWith(this.googleSearch));
+                        if (this.googleSearch.length > 0) {
+                            return result.slice(0, 10);
+                        }
+                    }
+                },
+                methods: {
+                    potwierdz() {
+                        this.wyszukaj = this.googleSearch
+                    },
+                    uzupelnij(miasto) {
+                        this.googleSearch = miasto.name;
+                        this.wyszukaj = this.googleSearch;
+                    },
+                }
+            })
 </script>
 </html>
