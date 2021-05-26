@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Wyszukiwarka Google</title>
-    <link rel="icon"  href="icon.png">
+    <link rel="icon"  href="obrazki/icon.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="styleWyniki.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
@@ -31,7 +31,7 @@
                   <div class="widok">
                       <img class="lupa" src="lupa.png" @click="potwierdz" title="Szukaj">
                       <input v-model="googleSearch" @keyup.enter="potwierdz" type="search">
-                      <img class="klaw" src="klaw.png" title="Narzędzia do wprowadzania tekstu">
+                      <img class="klaw" src="klawiatura.png" title="Narzędzia do wprowadzania tekstu">
                       <img class="mikro" src="mikro.png" title="Wyszukiwanie głosowe">
                   </div>
               </div>
@@ -84,7 +84,7 @@
             <input ref="second" type="text" v-model="googleSearch">
             <img src="lupa2.png" class="lupa">
             <img src="mikro.png" class="mikrofon">
-            <img src="klaw.png" class="klaw">
+            <img src="klaw.png" class="klawiatura">
             <div class="line"></div>
             <img src="iks.png" class="iks">
           </div>
@@ -103,6 +103,8 @@
         </div>
 
     </div> 
+    <div class="searchResults">
+
 
     <div class="searchResults">
 
@@ -258,30 +260,30 @@
 </body>
 
 <script>
-   var app = new Vue({
-                el: "#app",
-                data: {
-                    googleSearch:"",
-                    wyszukaj:"",
-                    cities: window.cities,
-                },
-                computed: {
-                    filtredCities() {
-                        let result = this.cities.filter(miasto => miasto.name.startsWith(this.googleSearch) || miasto.name.toLowerCase().startsWith(this.googleSearch));
-                        if (this.googleSearch.length > 0) {
-                            return result.slice(0, 10);
-                        }
-                    }
-                },
-                methods: {
-                    potwierdz() {
-                        this.wyszukaj = this.googleSearch
-                    },
-                    uzupelnij(miasto) {
-                        this.googleSearch = miasto.name;
-                        this.wyszukaj = this.googleSearch;
-                    },
-                }
-            })
-</script>
-</html>
+    var app = new Vue({
+                 el: "#app",
+                 data: {
+                     googleSearch:"",
+                     wyszukaj:"",
+                     cities: window.cities,
+                 },
+                 computed: {
+                     filtredCities() {
+                         let result = this.cities.filter(miasto => miasto.name.startsWith(this.googleSearch) || miasto.name.toLowerCase().startsWith(this.googleSearch));
+                         if (this.googleSearch.length > 0) {
+                             return result.slice(0, 10);
+                         }
+                     }
+                 },
+                 methods: {
+                     potwierdz() {
+                         this.wyszukaj = this.googleSearch
+                     },
+                     uzupelnij(miasto) {
+                         this.googleSearch = miasto.name;
+                         this.wyszukaj = this.googleSearch;
+                     },
+                 }
+             })
+ </script>
+ </html>
