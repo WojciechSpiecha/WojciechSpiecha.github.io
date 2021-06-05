@@ -28,6 +28,8 @@
                 <div class=" gorny_pasek">
                 <section class="m-flex_element pasek-flex">
                     <div class="czesc">
+                         <!-- Autocompleter jako osobny plik
+                            <v-autocompleter :options="cities" @click="handleClick(miasto.name)" @wybierz="eventHandler($googleSearch)"></v-autocompleter> -->
                         <input class="input_wyszukaj" ref="top" v-model="googleSearch" maxlength="2048" @focus="skupienie = true" @keyup.down="dol()" @keyup.up="gora()" @keyup.enter="enter()"/>                         
                             <div class="krzyzyk">
                             <img title="Wyczyść" class="ikona_input-clear" src="iks.png"/>
@@ -335,5 +337,36 @@
                 }      
             }
         })
-    </script>   
-</html>
+    </script>
+    
+    <!-- Autocompleter dla osobnego pliku (próba)
+        var app = new Vue({
+        el: '#start',
+        data: {
+     
+          googleSearch: '',
+          searchedInput:'',
+          filtrowaneMiasta:"",
+          cities: window.cities,
+          filtrowane_miasta_aktualizacja:true,
+          skupienie: false,
+          zmiana: false,
+          zaznaczenie: -1,
+        },
+        methods: {
+          eventHandler: function (id) {
+              console.log(id)
+              console.log("Here")
+            },
+        },
+        aktywne()
+                 {
+                    if(this.googleSearch.length==0){
+                        this.zmiana=false;
+                    }
+                    return this.zmiana;
+                 },
+             
+      }); -->
+    
+    </html>
