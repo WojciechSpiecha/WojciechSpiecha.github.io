@@ -7,6 +7,7 @@
     <title>Strona Google</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="styleWyniki.css">
+    <link rel="stylesheet" type="text/css" href="autocompleter.css">
     <link rel="shortcut icon" href="icon.png" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="./cities.js"></script>
@@ -26,14 +27,14 @@
                 </section>
                 <div class=" gorny_pasek">
                 <section class="m-flex_element pasek-flex">
-                    <div class="modul">
-                        <input class="input_wyszukiwanie" ref="top" v-model="googleSearch" maxlength="2048" @focus="skupienie = true" @keyup.down="dol()" @keyup.up="gora()" @keyup.enter="enter()"/>                       
+                    <div class="czesc">
+                        <input class="input_wyszukaj" ref="top" v-model="googleSearch" maxlength="2048" @focus="skupienie = true" @keyup.down="dol()" @keyup.up="gora()" @keyup.enter="enter()"/>                         
                             <div class="krzyzyk">
-                            <img title="Wyczyść" class="ikona_input-clear" src="iks.svg"/>
+                            <img title="Wyczyść" class="ikona_input-clear" src="iks.png"/>
                             <span class="kreska"></span>
                             </div>
-                        <img class="ikona_input-keyboard" src="klawiatura.svg"/>
-                        <img class="ikona_input-mikrofon" src="mikrofon.png"/>
+                        <img class="ikona_input-keyboard" src="klawiatura.png"/>
+                        <img class="ikona_input-mikrofon" src="mikro.png"/>
                         <button id="przycisk_szukaj"><img class="ikona_input" src="lupa2.png"/></button>
                     </div>
                     <div  id="wypisz_miasta" class="miasta_lista" :class="{widok : googleSearch.length > 0 /*&& skupienie*/ && filtrowaneMiasta.length>0}" >
@@ -70,6 +71,7 @@
 
         <main>
 
+
             <div class="m-flex_container">
                 
                 <div class="liczba_wynikow">Około 20 wyników (2,4s)</div>
@@ -80,8 +82,8 @@
                             <img class="ikona_input" src="lupa2.png" />
                             <input class="input_wyszukiwanie" maxlength="2048" v-model="googleSearch" @focus="skupienie = true" @keyup.enter="enter()" @keyup.down="dol()" @keyup.up="gora()"/>
                             <img class="ikona_input-clear" src="clear.svg"/>
-                            <img class="ikona_input-keyboard" src="klawiatura.svg"/>
-                            <img class="ikona_input-mikrofon" src="mikrofon.png"/>
+                            <img class="ikona_input-keyboard" src="klawiatura.png"/>
+                            <img class="ikona_input-mikrofon" src="mikro.png"/>
                         </div>
                         <div  id="listaMiast" class="nazwy_miast" :class="{widok : googleSearch.length > 0 /*&& skupienie*/ && filtrowaneMiasta.length>0}" >
                             <ul >
@@ -333,5 +335,5 @@
                 }      
             }
         })
-    </script>
-    </html>
+    </script>   
+</html>

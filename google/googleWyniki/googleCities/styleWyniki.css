@@ -1,6 +1,5 @@
 .results .pasek-flex-results,
 .results .additional,
-.results .ikona_input-clear,
 .results .gorny_pasek,
 .results .nawigacja,
 .results .liczba_wynikow,
@@ -295,70 +294,10 @@ body .results{
 .results .aplikacja{
     align-items: center;
 }
-.results img.ikona_input-clear{
-    width: 14px;
-    height: 14px;
-    margin-right: 14px;
-    padding-left:10px;
-    align-self:center;
-}
 .results span.kreska{
     border-right: 1px solid #dfe1e5;
     display: inline-block;
     height: 34px;
-}
-.results .modul{
-    padding: 0px;
-    width:100%;
-    height:44px;
-    display: flex;
-    line-height:normal;
-}
-.results .input_wyszukiwanie{
-    align-self:center;
-    margin-left: 13px;
-    margin-top: 10px;
-}
-.results .input_wyszukiwanie:focus{
-    margin-left: 20px;
-    height:14px;
-    font-size: 17px;
-}
-.results .krzyzyk{
-    display:flex;
-    align-self:center;
-    cursor:pointer;
-    margin:0px;
-}
-.results .ikona_input-keyboard{
-    align-self:center;
-    padding-right: 10px;
-    padding-left: 15px;
-    margin-top: 5px;
-}
-.results .ikona_input-mikrofon{
-    align-self:center;
-    padding-right: 6px;
-    padding-left: 6px;
-    margin-top: 3px;
-}
-.results .ikona_input{
-    align-self:center;
-    margin-top: 3px;
-}
-.miasta_lista{
-    display: none;
-    line-height: 0.8rem;
-    border-top: 1px solid #dfe1e5;
-    background-color: #fff;
-    z-index:10;
-    margin-bottom:2px;
-    border-bottom-left-radius: 25%;
-    border-bottom-right-radius: 25%;
-}
-.miasta_lista li{
-    padding:2px 0px;
-    cursor: pointer;
 }
 .results #przycisk_szukaj{
     display: flex;
@@ -370,10 +309,7 @@ body .results{
     cursor: pointer;
     justify-content: center;
 }
-.lista_elementow{
-    padding: 3px 0px;
-    cursor: pointer;
-}
+
 .results .nawigacja{
     margin-left: 169px;
 }
